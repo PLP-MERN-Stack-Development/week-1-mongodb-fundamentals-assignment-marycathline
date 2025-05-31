@@ -112,29 +112,29 @@ db.books.insertMany([
 ]);
 
 //Queries
-// querie to find books by a specific genre
+// find books by a specific genre
 
 db.books.find({genre: "Historical Fiction"})
 
-// querie to find books published after a certain year
+//find books published after a certain year
 db.books.find({published_year: {$gt: 2000}})
 
-// querie to find books by a specific author
+// find books by a specific author
 db.books.find({author: "Chimamanda Ngozi Adichie"})
 
-//querie to update the price of a book
+//update the price of a book
  db.books.updateOne({title: "Petals of Blood"}, 
-    {$set:{Price: 18.20}})
+    {$set:{price: 18.20}})
 
-//querie to delete a book by title
+//delete a book by title
 db.books.deleteOne({title:"The Shadow of Imana"})
 
-//querie to find books that are in stock and published after 2010
+//find books that are in stock and published after 2010
 
 db.books.find({in_stock: true, 
     published_year:{$gt: 2010}})
 
-//querie to use projection to return only the title, author and price
+//use projection to return only the title, author and price
 db.books.find(
   {
     in_stock: true,
@@ -207,7 +207,7 @@ db.books.find(
     author: 1,
     price: 1
   }
-).sort({ price: 1 }).limit(5).skip(2);
+).sort({ price: 1 }).limit(5).skip(5);
 
 //page 3
 
@@ -242,7 +242,7 @@ db.books.find(
   }
 ])
 
-// querie to create an aggregation pipeline to find the author with the most books in the collection
+// query to create an aggregation pipeline to find the author with the most books in the collection
 db.books.aggregate([
   {
     $group: {
