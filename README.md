@@ -4,8 +4,8 @@ This repository contains MongoDB operations for managing a bookstore collection,
 🛠️ Setup Instructions
 1. 📂 Clone the Repository
 bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/PLP-MERN-Stack-Development/week-1-mongodb-fundamentals-assignment-marycathline.git
+cd repo
 2. 🧩 Start MongoDB
 Ensure MongoDB is installed and running. Use the MongoDB shell or a GUI like MongoDB Compass.
 
